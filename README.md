@@ -1,4 +1,4 @@
-# Cryptocurrency Transaction Scraper
+# Bitinfocharts Transaction Scraper
 
 Because I'm an idiot and couldn't work out how to scrape the BitInfoCharts website, I've created this Python script that scrapes historical transaction data using OCR. I'm sure that there is a better way to do this, but I couldn't work it out.
 
