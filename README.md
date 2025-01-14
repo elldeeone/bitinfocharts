@@ -2,6 +2,8 @@
 
 Because I'm an idiot and couldn't work out how to scrape the BitInfoCharts website, I've created this Python script that scrapes historical transaction data using OCR. I'm sure that there is a better way to do this, but I couldn't work it out.
 
+Also it's still not 100% accurate, but it's close enough for me.
+
 ## Features
 
 - Scrapes daily transaction counts for multiple cryptocurrencies
