@@ -75,11 +75,11 @@ def scrape_crypto_transactions(url, coin_name, output_filename):
         
         data_points = []
         
-        steps = 120
+        steps = 180
         for i in range(steps):
             try:
                 print(f"Movement {i+1}/{steps}")
-                actions.move_by_offset(15, 0).perform()
+                actions.move_by_offset(10, 0).perform()
                 time.sleep(0.4)
                 
                 screenshot = driver.get_screenshot_as_png()
@@ -119,9 +119,9 @@ def scrape_crypto_transactions(url, coin_name, output_filename):
                 print(f"Parsing point: {point}")
                 point = point.replace('\n', ' ').strip()
                 
-                date_match = re.search(r'[29]024/[01]\d/\d{2}', point)
+                date_match = re.search(r'[29]02[45]/[01]\d/\d{2}', point)
                 if date_match:
-                    date_str = date_match.group(0).replace('9024', '2024')
+                    date_str = date_match.group(0).replace('9024', '2024').replace('9025', '2025')
                     
                     transactions_match = re.search(r'Transactions:\s*([0-9,.]+)k', point)
                     if transactions_match:
